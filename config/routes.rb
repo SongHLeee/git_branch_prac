@@ -1,11 +1,25 @@
 Rails.application.routes.draw do
-  get 'home/index'
 
-  get 'home/show'
+root 'home#index'
 
-  get 'home/undate_view'
+get 'index' => 'home#index'
 
-  get 'home/create'
+get 'show/:post_id' => 'home#show'
+
+get 'create' => 'home#create'
+
+post 'new' => 'home#new'
+
+get 'update_view/:post_id' => 'home#update_view'
+
+post 'update/:post_id' => 'home#update'
+
+get 'delete/:post_id' => 'home#delete'
+
+post 'reply_create' => 'home#reply_create'
+
+get 'reply_delete/:reply_id' => 'home#reply_delete'
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
