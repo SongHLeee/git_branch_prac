@@ -1,2 +1,10 @@
-<h1>Home#show</h1>
-<p>Find me in app/views/home/show.html.erb</p>
+<h1>게시글 번호: <%= @showBoard.id %></h1>
+
+<hr>
+    글번호: <%= @showBoard.id %><br>
+    제목 : <%= @showBoard.post_title %><br>
+    작성자 : <%= @showBoard.post_editor %><br>
+    내용 : <%= @showBoard.post_content %><br>
+    <a href="/update_view/<%= @showBoard.id %>">[수정]</a><a href="/delete/<%= @showBoard.id%>">[삭제]</a>
+    <br>
+<hr>

@@ -1,5 +1,6 @@
 class HomeController < ApplicationController
   def index
+    @posts = Post.all.reverse
   end
 
   def show
