@@ -1,2 +1,9 @@
-<h1>Home#undate_view</h1>
-<p>Find me in app/views/home/undate_view.html.erb</p>
+<h1> <%= @post.id %>번 Post 를 수정할 화면입니다. </h1>
+<form action="/posts/update/<%= @post.id %>" method="post">
+    <p>제목</p>
+    <input type="text" name="input_title" value="<%= @post.title %>">
+    <p>내용</p>
+    <input type="text" name="input_content" value="<%= @post.content %>">
+    <p>제출</p>
+    <input type="submit">
+</form>
