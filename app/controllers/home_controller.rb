@@ -14,7 +14,6 @@ class HomeController < ApplicationController
     makeBoard.post_editor = params[:input_post_editor]
     makeBoard.post_content = params[:input_post_content]
     makeBoard.save
-    
-    redirect_to '/'
+
   end
 end
